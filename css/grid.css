@@ -1,0 +1,73 @@
+body {
+    font-size: 30px;
+}
+
+.workGrid {
+    display: grid;
+    border: 1px solid red;
+    width: 100%;
+    height: 800px;
+    grid-gap: 5px;
+    grid-template-columns: auto;
+    grid-template-rows:  200px 200px 200px;
+    grid-template-areas: 
+"mainWork1 mainWork1 mainWork2 mainWork2 mainWork3 mainWork3"
+"mainWork1 mainWork1 mainWork2 mainWork2 mainWork3 mainWork3"
+"coolWork4 coolWork4 okWork1 okWork2 okWork3 okWork4"
+"moreOkWork1 moreOkWork2 moreOkWork3 moreOkWork4 moreCoolWork moreCoolWork"
+
+}
+
+/*Hi Cara/Muriel  I used this seperate file to see how to use grid in a more complex format then how I use on my actual website. I thought to display my work in a few levels.. UX taking main area's on top row and then other work I've done as a web designer and graphic designer */
+.mainWork1{grid-area: mainWork1;}
+.mainWork2{grid-area: mainWork2;}
+.mainWork3{grid-area: mainWork3;}
+.coolWork4{grid-area: coolWork4;}
+
+.okWork1 {grid-area: okWork1;}
+.okWork2 {grid-area: okWork2;}
+.okWork3 {grid-area: okWork3;}
+.okWork4 {grid-area: okWork4;}
+
+.moreOkWork1 {grid-area: moreOkWork1;}
+.moreOkWork2 {grid-area: moreOkWork2;}
+.moreOkWork3 {grid-area: moreOkWork3;}
+.moreOkWork4 {grid-area: moreOkWork4;}
+
+.moreCoolWork {grid-area: moreCoolWork;} /*html location changed to last*/
+
+.bg {
+    background-color:rgb(187, 214, 214);
+ }
+ .bg:hover {
+    background-color:rgb(175, 124, 173);
+ }
+
+@media only screen and (max-width: 600px) {
+    .workGrid {
+        display: grid;
+        border: 1px solid red;
+        width: 100%;
+        height: 800px;
+        grid-gap: 5px;
+        grid-template-columns: auto;
+        grid-template-rows:  repeat(13, 200px);
+        grid-template-areas: 
+    "mainWork1" 
+    "mainWork2" 
+    "mainWork3"
+    "coolWork4" 
+    "okWork1" 
+    "okWork2" 
+    "okWork3" 
+    "okWork4"
+    "moreOkWork1" 
+    "moreOkWork2" 
+    "moreOkWork3" 
+    "moreOkWork4" 
+    "moreCoolWork" 
+
+    
+    }
+
+}
